@@ -14,6 +14,7 @@
 		D80E79FF2FCE08910055C645 /* HousesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E79FE2FCE08910055C645 /* HousesListView.swift */; };
 		D80E7A012FCE08910055C645 /* HouseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A002FCE08910055C645 /* HouseItemView.swift */; };
 		D80E7A032FCE08910055C645 /* RELEASE.md in Resources */ = {isa = PBXBuildFile; fileRef = D80E7A022FCE08910055C645 /* RELEASE.md */; };
+		D80E7A082FCE102C0055C645 /* SimonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A072FCE102C0055C645 /* SimonGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D80E79FE2FCE08910055C645 /* HousesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesListView.swift; sourceTree = "<group>"; };
 		D80E7A002FCE08910055C645 /* HouseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseItemView.swift; sourceTree = "<group>"; };
 		D80E7A022FCE08910055C645 /* RELEASE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RELEASE.md; sourceTree = "<group>"; };
+		D80E7A072FCE102C0055C645 /* SimonGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				D80E79F82FCE08910055C645 /* House.swift */,
+				D80E7A072FCE102C0055C645 /* SimonGame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			files = (
 				D80E7A012FCE08910055C645 /* HouseItemView.swift in Sources */,
 				D80E79F92FCE08910055C645 /* House.swift in Sources */,
+				D80E7A082FCE102C0055C645 /* SimonGame.swift in Sources */,
 				D80E79FF2FCE08910055C645 /* HousesListView.swift in Sources */,
 				D80E79FC2FCE08910055C645 /* HouseListViewModel.swift in Sources */,
 				D80E79F42FCE08910055C645 /* ICS3UCulminatingApp.swift in Sources */,
