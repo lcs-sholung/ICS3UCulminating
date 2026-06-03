@@ -15,6 +15,7 @@
 		D80E7A012FCE08910055C645 /* HouseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A002FCE08910055C645 /* HouseItemView.swift */; };
 		D80E7A032FCE08910055C645 /* RELEASE.md in Resources */ = {isa = PBXBuildFile; fileRef = D80E7A022FCE08910055C645 /* RELEASE.md */; };
 		D80E7A082FCE102C0055C645 /* SimonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A072FCE102C0055C645 /* SimonGame.swift */; };
+		D80E7A0A2FD05A000055C645 /* SimonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A092FD05A000055C645 /* SimonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D80E7A002FCE08910055C645 /* HouseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseItemView.swift; sourceTree = "<group>"; };
 		D80E7A022FCE08910055C645 /* RELEASE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RELEASE.md; sourceTree = "<group>"; };
 		D80E7A072FCE102C0055C645 /* SimonGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonGame.swift; sourceTree = "<group>"; };
+		D80E7A092FD05A000055C645 /* SimonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				D80E79FB2FCE08910055C645 /* HouseListViewModel.swift */,
+				D80E7A092FD05A000055C645 /* SimonViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				D80E7A012FCE08910055C645 /* HouseItemView.swift in Sources */,
 				D80E79F92FCE08910055C645 /* House.swift in Sources */,
+				D80E7A0A2FD05A000055C645 /* SimonViewModel.swift in Sources */,
 				D80E7A082FCE102C0055C645 /* SimonGame.swift in Sources */,
 				D80E79FF2FCE08910055C645 /* HousesListView.swift in Sources */,
 				D80E79FC2FCE08910055C645 /* HouseListViewModel.swift in Sources */,
