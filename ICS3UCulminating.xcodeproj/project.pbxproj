@@ -9,28 +9,27 @@
 /* Begin PBXBuildFile section */
 		D80E79F42FCE08910055C645 /* ICS3UCulminatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E79F32FCE08910055C645 /* ICS3UCulminatingApp.swift */; };
 		D80E79F62FCE08910055C645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80E79F52FCE08910055C645 /* Assets.xcassets */; };
-		D80E79F92FCE08910055C645 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E79F82FCE08910055C645 /* House.swift */; };
-		D80E79FC2FCE08910055C645 /* HouseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E79FB2FCE08910055C645 /* HouseListViewModel.swift */; };
-		D80E79FF2FCE08910055C645 /* HousesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E79FE2FCE08910055C645 /* HousesListView.swift */; };
-		D80E7A012FCE08910055C645 /* HouseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A002FCE08910055C645 /* HouseItemView.swift */; };
 		D80E7A032FCE08910055C645 /* RELEASE.md in Resources */ = {isa = PBXBuildFile; fileRef = D80E7A022FCE08910055C645 /* RELEASE.md */; };
 		D80E7A082FCE102C0055C645 /* SimonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A072FCE102C0055C645 /* SimonGame.swift */; };
 		D80E7A0A2FD05A000055C645 /* SimonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A092FD05A000055C645 /* SimonViewModel.swift */; };
 		D80E7A0C2FD05DB70055C645 /* SimonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A0B2FD05DB70055C645 /* SimonView.swift */; };
+		D80E7A0E2FD07A3F0055C645 /* SimonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A0D2FD07A3F0055C645 /* SimonColor.swift */; };
+		D80E7A102FD07A3F0055C645 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A0F2FD07A3F0055C645 /* GameState.swift */; };
+		D80E7A122FD07A3F0055C645 /* SimonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A112FD07A3F0055C645 /* SimonButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D80E79F02FCE08900055C645 /* ICS3UCulminating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICS3UCulminating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80E79F32FCE08910055C645 /* ICS3UCulminatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICS3UCulminatingApp.swift; sourceTree = "<group>"; };
 		D80E79F52FCE08910055C645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D80E79F82FCE08910055C645 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
-		D80E79FB2FCE08910055C645 /* HouseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListViewModel.swift; sourceTree = "<group>"; };
-		D80E79FE2FCE08910055C645 /* HousesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesListView.swift; sourceTree = "<group>"; };
-		D80E7A002FCE08910055C645 /* HouseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseItemView.swift; sourceTree = "<group>"; };
 		D80E7A022FCE08910055C645 /* RELEASE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RELEASE.md; sourceTree = "<group>"; };
 		D80E7A072FCE102C0055C645 /* SimonGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonGame.swift; sourceTree = "<group>"; };
 		D80E7A092FD05A000055C645 /* SimonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonViewModel.swift; sourceTree = "<group>"; };
 		D80E7A0B2FD05DB70055C645 /* SimonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonView.swift; sourceTree = "<group>"; };
+		D80E7A0D2FD07A3F0055C645 /* SimonColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonColor.swift; sourceTree = "<group>"; };
+		D80E7A0F2FD07A3F0055C645 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		D80E7A112FD07A3F0055C645 /* SimonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonButton.swift; sourceTree = "<group>"; };
+		D80E7A152FD1D3D10055C645 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +48,7 @@
 			children = (
 				D80E79F22FCE08900055C645 /* ICS3UCulminating */,
 				D80E79F12FCE08900055C645 /* Products */,
+				D80E7A152FD1D3D10055C645 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,8 +76,9 @@
 		D80E79F72FCE08910055C645 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D80E79F82FCE08910055C645 /* House.swift */,
 				D80E7A072FCE102C0055C645 /* SimonGame.swift */,
+				D80E7A0D2FD07A3F0055C645 /* SimonColor.swift */,
+				D80E7A0F2FD07A3F0055C645 /* GameState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,7 +86,6 @@
 		D80E79FA2FCE08910055C645 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				D80E79FB2FCE08910055C645 /* HouseListViewModel.swift */,
 				D80E7A092FD05A000055C645 /* SimonViewModel.swift */,
 			);
 			path = ViewModels;
@@ -94,9 +94,8 @@
 		D80E79FD2FCE08910055C645 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D80E79FE2FCE08910055C645 /* HousesListView.swift */,
-				D80E7A002FCE08910055C645 /* HouseItemView.swift */,
 				D80E7A0B2FD05DB70055C645 /* SimonView.swift */,
+				D80E7A112FD07A3F0055C645 /* SimonButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,14 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D80E7A012FCE08910055C645 /* HouseItemView.swift in Sources */,
-				D80E79F92FCE08910055C645 /* House.swift in Sources */,
 				D80E7A0A2FD05A000055C645 /* SimonViewModel.swift in Sources */,
 				D80E7A0C2FD05DB70055C645 /* SimonView.swift in Sources */,
 				D80E7A082FCE102C0055C645 /* SimonGame.swift in Sources */,
-				D80E79FF2FCE08910055C645 /* HousesListView.swift in Sources */,
-				D80E79FC2FCE08910055C645 /* HouseListViewModel.swift in Sources */,
+				D80E7A102FD07A3F0055C645 /* GameState.swift in Sources */,
+				D80E7A0E2FD07A3F0055C645 /* SimonColor.swift in Sources */,
 				D80E79F42FCE08910055C645 /* ICS3UCulminatingApp.swift in Sources */,
+				D80E7A122FD07A3F0055C645 /* SimonButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

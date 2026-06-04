@@ -7,27 +7,6 @@
 
 import Foundation
 
-// MARK: - SimonColor
-// This enum represents the four different colored buttons in the Simon game.
-// We use a String raw value so we can easily display the color name if needed.
-// It conforms to CaseIterable so we can easily pick a random color from the list.
-enum SimonColor: String, CaseIterable {
-    case green = "Green"
-    case red = "Red"
-    case yellow = "Yellow"
-    case blue = "Blue"
-}
-
-// MARK: - GameState
-// This enum represents the different phases or "states" that the Simon game can be in.
-// Using an enum helps us keep track of what the game is currently doing.
-enum GameState {
-    case waitingToStart    // The game is at the beginning, waiting for the player to press "Start".
-    case showingSequence   // The game is currently playing back the sequence for the player to watch.
-    case waitingForInput   // The game is waiting for the player to repeat the sequence by pressing buttons.
-    case gameOver          // The player pressed the wrong button and the game has ended.
-}
-
 // MARK: - SimonGame
 // This structure represents the data and state of a single Simon game session.
 // In a Model-View-ViewModel (MVVM) architecture, this is the "Model".

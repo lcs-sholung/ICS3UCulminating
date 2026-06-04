@@ -23,6 +23,10 @@ class SimonViewModel {
     // but only this ViewModel can change it.
     private(set) var game: SimonGame = SimonGame()
     
+    // This array stores the three most recent "best scores" (scores from completed games).
+    // We keep it limited to the top 3 and sort them from highest to lowest.
+    private(set) var recentBestScores: [Int] = []
+    
     // This property keeps track of which color is currently "lit up" or "active".
     // When the game is showing the sequence, we will set this to a color, wait a bit,
     // then set it back to nil. The View will use this to change the button's appearance.
@@ -121,6 +125,24 @@ class SimonViewModel {
         } else {
             // If they pressed the wrong button, the game is over.
             game.state = .gameOver
+            
+            // When the game ends, record the score in our best scores list.
+            updateBestScores(with: game.score)
+        }
+    }
+    
+    // Updates the list of the three most recent best scores.
+    private func updateBestScores(with newScore: Int) {
+        // 1. Add the new score to our list.
+        recentBestScores.append(newScore)
+        
+        // 2. Sort the scores in descending order (highest to lowest).
+        // We use a simple loop-based sort to keep it clear for students.
+        recentBestScores.sort { $0 > $1 }
+        
+        // 3. If we have more than 3 scores, keep only the top 3.
+        if recentBestScores.count > 3 {
+            recentBestScores.removeLast()
         }
     }
 }
