@@ -32,6 +32,10 @@ class SimonViewModel {
     // then set it back to nil. The View will use this to change the button's appearance.
     var highlightedColor: SimonColor? = nil
     
+    // This property stores the state of the game BEFORE it was paused.
+    // This allows us to return to the correct phase (showing sequence or waiting for input) when unpausing.
+    private var stateBeforePause: GameState = .waitingToStart
+    
     // MARK: - Initializer
     
     init() {
@@ -70,6 +74,21 @@ class SimonViewModel {
         
         // Iterate through every color in the current sequence.
         for color in game.sequence {
+            
+            // CHECK FOR PAUSE:
+            // If the player pauses the game while the sequence is playing,
+            // we need to "wait" here until they unpause.
+            while game.state == .paused {
+                // We sleep for a tiny amount (0.1 seconds) and then check again.
+                // This prevents the app from "looping" too fast and using up battery.
+                try? await Task.sleep(nanoseconds: 100_000_000)
+            }
+            
+            // If the player quit while we were paused or waiting, stop the sequence entirely.
+            if game.state == .waitingToStart {
+                return
+            }
+            
             // "Light up" the current color.
             highlightedColor = color
             
@@ -90,7 +109,7 @@ class SimonViewModel {
     // This function is called every time the player taps a color button.
     func handleInput(for color: SimonColor) {
         // If the game isn't currently waiting for input, ignore the tap.
-        // (This prevents the player from "cheating" while the sequence is playing).
+        // (This prevents the player from "cheating" while the sequence is playing or if paused).
         guard game.state == .waitingForInput else {
             return
         }
@@ -129,6 +148,29 @@ class SimonViewModel {
             // When the game ends, record the score in our best scores list.
             updateBestScores(with: game.score)
         }
+    }
+    
+    // Pauses the current game.
+    func pauseGame() {
+        // Only allow pausing if the game is currently active.
+        if game.state == .showingSequence || game.state == .waitingForInput {
+            // Remember where we were so we can come back.
+            stateBeforePause = game.state
+            game.state = .paused
+        }
+    }
+    
+    // Resumes the game from where it was paused.
+    func unpauseGame() {
+        if game.state == .paused {
+            game.state = stateBeforePause
+        }
+    }
+    
+    // Quits the current game and returns to the start screen.
+    func quitGame() {
+        game.state = .waitingToStart
+        game = SimonGame() // Reset the game data
     }
     
     // Updates the list of the three most recent best scores.

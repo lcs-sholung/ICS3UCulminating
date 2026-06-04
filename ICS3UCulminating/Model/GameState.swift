@@ -14,5 +14,6 @@ enum GameState {
     case waitingToStart    // The game is at the beginning, waiting for the player to press "Start".
     case showingSequence   // The game is currently playing back the sequence for the player to watch.
     case waitingForInput   // The game is waiting for the player to repeat the sequence by pressing buttons.
+    case paused            // The game has been temporarily stopped by the player.
     case gameOver          // The player pressed the wrong button and the game has ended.
 }
