@@ -41,6 +41,9 @@ class SimonViewModel {
     init() {
         // We start with a fresh game instance.
         self.game = SimonGame()
+        
+        // We load any previously saved scores from the device's storage.
+        loadScores()
     }
     
     // MARK: - Functions
@@ -191,6 +194,32 @@ class SimonViewModel {
         // 3. If we have more than 3 scores, keep only the top 3.
         if recentBestScores.count > 3 {
             recentBestScores.removeLast()
+        }
+        
+        // 4. Save the updated list to the device's storage.
+        saveScores()
+    }
+    
+    // MARK: - Persistence Functions
+    
+    // Saves the top scores to a JSON file on the device.
+    private func saveScores() {
+        // 1. Convert our array of integers into JSON data.
+        if let encodedData = try? JSONEncoder().encode(recentBestScores) {
+            // 2. Save that data into the 'UserDefaults' storage (a simple persistent database).
+            UserDefaults.standard.set(encodedData, forKey: "recentBestScores")
+        }
+    }
+    
+    // Loads the top scores from the device's storage when the app starts.
+    private func loadScores() {
+        // 1. Look for the saved data in 'UserDefaults'.
+        if let savedData = UserDefaults.standard.data(forKey: "recentBestScores") {
+            // 2. If we find it, try to convert the JSON data back into an array of integers.
+            if let decodedScores = try? JSONDecoder().decode([Int].self, from: savedData) {
+                // 3. Update our property with the loaded scores.
+                self.recentBestScores = decodedScores
+            }
         }
     }
 }
