@@ -89,8 +89,11 @@ class SimonViewModel {
                 return
             }
             
-            // "Light up" the current color.
+            // \"Light up\" the current color.
             highlightedColor = color
+            
+            // Play the musical note associated with this color.
+            AudioManager.shared.playNote(for: color)
             
             // Wait for the player to see the light (e.g., 0.6 seconds).
             try? await Task.sleep(nanoseconds: 600_000_000)
@@ -116,6 +119,9 @@ class SimonViewModel {
         
         // 1. Add the color the player just pressed to their input list.
         game.playerInput.append(color)
+        
+        // Play the musical note for the button the player just pressed.
+        AudioManager.shared.playNote(for: color)
         
         // 2. Check if the button they just pressed is the CORRECT one.
         // We compare the color they just pressed to the color at the same position in the original sequence.

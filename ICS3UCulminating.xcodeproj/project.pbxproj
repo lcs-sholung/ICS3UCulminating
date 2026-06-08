@@ -16,6 +16,7 @@
 		D80E7A0E2FD07A3F0055C645 /* SimonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A0D2FD07A3F0055C645 /* SimonColor.swift */; };
 		D80E7A102FD07A3F0055C645 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A0F2FD07A3F0055C645 /* GameState.swift */; };
 		D80E7A122FD07A3F0055C645 /* SimonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E7A112FD07A3F0055C645 /* SimonButton.swift */; };
+		D8499BAC2FD7420000B117EB /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8499BAB2FD7420000B117EB /* AudioManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D80E7A0F2FD07A3F0055C645 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		D80E7A112FD07A3F0055C645 /* SimonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonButton.swift; sourceTree = "<group>"; };
 		D80E7A152FD1D3D10055C645 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D8499BAB2FD7420000B117EB /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				D80E79F72FCE08910055C645 /* Model */,
 				D80E79FA2FCE08910055C645 /* ViewModels */,
 				D80E79FD2FCE08910055C645 /* Views */,
+				D8499BAA2FD741F000B117EB /* Utils */,
 			);
 			path = ICS3UCulminating;
 			sourceTree = "<group>";
@@ -98,6 +101,14 @@
 				D80E7A112FD07A3F0055C645 /* SimonButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D8499BAA2FD741F000B117EB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D8499BAB2FD7420000B117EB /* AudioManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			files = (
 				D80E7A0A2FD05A000055C645 /* SimonViewModel.swift in Sources */,
 				D80E7A0C2FD05DB70055C645 /* SimonView.swift in Sources */,
+				D8499BAC2FD7420000B117EB /* AudioManager.swift in Sources */,
 				D80E7A082FCE102C0055C645 /* SimonGame.swift in Sources */,
 				D80E7A102FD07A3F0055C645 /* GameState.swift in Sources */,
 				D80E7A0E2FD07A3F0055C645 /* SimonColor.swift in Sources */,
