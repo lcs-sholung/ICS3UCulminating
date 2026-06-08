@@ -35,6 +35,7 @@ struct SimonButton: View {
         return viewModel.highlightedColor == color
     }
     
+    // The 'body' property defines the visual appearance and interaction for the button.
     var body: some View {
         Button(action: {
             // When the button is pressed, tell the ViewModel to handle the input.

@@ -24,6 +24,10 @@ class AudioManager {
     // The player node is where we schedule our sound "packets" to be played.
     private let playerNode = AVAudioPlayerNode()
     
+    // We define a standard mono audio format (44.1kHz) to use throughout the class.
+    // This ensures consistency between the engine connection and the buffers we create.
+    private let monoFormat = AVAudioFormat(standardFormatWithSampleRate: 44100.0, channels: 1)!
+    
     // MARK: - Initializer
     
     private init() {
@@ -50,10 +54,15 @@ class AudioManager {
             // 1. Attach the player node if it hasn't been attached yet.
             if playerNode.engine == nil {
                 audioEngine.attach(playerNode)
-                audioEngine.connect(playerNode, to: audioEngine.outputNode, format: nil)
+                
+                // 2. Connect the player node to the engine's output.
+                // IMPORTANT: We use our specific 'monoFormat' here. This tells the engine
+                // to expect mono input from the player and handle the conversion to
+                // stereo output for the speakers automatically.
+                audioEngine.connect(playerNode, to: audioEngine.outputNode, format: monoFormat)
             }
             
-            // 2. Start the engine.
+            // 3. Start the engine.
             try audioEngine.start()
             return true
         } catch {
@@ -87,18 +96,16 @@ class AudioManager {
     
     // A helper function that generates a simple sine wave tone.
     private func playTone(frequency: Double, duration: Double) {
-        // 1. Define the audio format (44.1kHz, mono).
-        let sampleRate = 44100.0
-        let audioFormat = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1)!
-        
-        // 2. Calculate the number of samples needed for the given duration.
+        // 1. Calculate the number of samples needed for the given duration.
+        // We use the sample rate defined in our 'monoFormat'.
+        let sampleRate = monoFormat.sampleRate
         let frameCount = UInt32(duration * sampleRate)
         
-        // 3. Create an audio buffer to hold the sound data.
-        guard let buffer = AVAudioPCMBuffer(pcmFormat: audioFormat, frameCapacity: frameCount) else { return }
+        // 2. Create an audio buffer to hold the sound data using our consistent 'monoFormat'.
+        guard let buffer = AVAudioPCMBuffer(pcmFormat: monoFormat, frameCapacity: frameCount) else { return }
         buffer.frameLength = frameCount
         
-        // 4. Fill the buffer with a sine wave at the desired frequency.
+        // 3. Fill the buffer with a sine wave at the desired frequency.
         let channels = buffer.floatChannelData!
         let channel = channels[0]
         for i in 0..<Int(frameCount) {

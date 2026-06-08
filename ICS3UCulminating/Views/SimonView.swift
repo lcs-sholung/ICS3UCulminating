@@ -28,6 +28,8 @@ struct SimonView: View {
     
     // The 'body' property defines the layout and appearance of the view.
     var body: some View {
+        // We use a ZStack to layer elements on top of each other.
+        // In this case, we place the pause button in front of the main game content.
         ZStack(alignment: .topLeading) {
             
             // MARK: Pause Button
@@ -63,6 +65,7 @@ struct SimonView: View {
                 }
             }
 
+            // The main vertical container for the game's title, board, and controls.
             VStack(spacing: 40) {
                 
                 // MARK: Header Section
@@ -79,6 +82,7 @@ struct SimonView: View {
                 // MARK: Game Board Section
                 // A 2x2 grid representing the four colored buttons.
                 VStack(spacing: 20) {
+                    // Top row: Green and Red
                     HStack(spacing: 20) {
                         // Green Button
                         SimonButton(color: .green, viewModel: viewModel)
@@ -87,6 +91,7 @@ struct SimonView: View {
                         SimonButton(color: .red, viewModel: viewModel)
                     }
                     
+                    // Bottom row: Yellow and Blue
                     HStack(spacing: 20) {
                         // Yellow Button
                         SimonButton(color: .yellow, viewModel: viewModel)
@@ -173,6 +178,7 @@ struct SimonView: View {
 }
 
 // MARK: - Preview
+// This code allows us to see a live preview of our SimonView inside Xcode.
 #Preview {
     SimonView()
 }
